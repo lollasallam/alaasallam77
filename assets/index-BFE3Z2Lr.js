@@ -76472,7 +76472,7 @@ function Dashboard() {
   ] });
 }
 function App() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/alaasallam/", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/alaasallam77/", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Welcome, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Route, { element: /* @__PURE__ */ jsxRuntimeExports.jsx(Layout, {}), children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "student", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),
