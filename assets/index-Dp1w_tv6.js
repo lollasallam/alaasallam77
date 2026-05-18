@@ -76471,15 +76471,25 @@ function Dashboard() {
     ] })
   ] });
 }
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  reactExports.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 function App() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/alaasallam77/", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Welcome, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Route, { element: /* @__PURE__ */ jsxRuntimeExports.jsx(Layout, {}), children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "student", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "theme/:themeId", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeViewer, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "dashboard", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Dashboard, {}) })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(BrowserRouter, { basename: "/alaasallam77/", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollToTop, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Welcome, {}) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(Route, { element: /* @__PURE__ */ jsxRuntimeExports.jsx(Layout, {}), children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "student", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home, {}) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "theme/:themeId", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeViewer, {}) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "dashboard", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Dashboard, {}) })
+      ] })
     ] })
-  ] }) });
+  ] });
 }
 clientExports.createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) })
