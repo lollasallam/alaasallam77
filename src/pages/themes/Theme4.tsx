@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme4() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,12 +22,12 @@ export default function Theme4() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-blue-600 shadow-sm border border-blue-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -57,7 +58,7 @@ export default function Theme4() {
                 </p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 border border-blue-100">
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-5 sm:p-6 md:p-8 border border-blue-100">
               <p className="text-slate-700 text-lg leading-relaxed mb-6 font-medium">
                 نحن لا نأكل بمفردنا! الغذاء جزء مهم من ثقافتنا واحتفالاتنا وتجمعاتنا الأسرية. 
                 ولكن، كيف تؤثر التجمعات والأصدقاء على ما نختاره لنأكله بكل تأكيد؟
@@ -86,6 +87,11 @@ export default function Theme4() {
                 </div>
               </div>
             </div>
+
+            <FastFoodRelation 
+              title="تدمير الترابط الأسري والاجتماعي"
+              description="تناول الوجبات السريعة بشكل فردي أو الانشغال بالهواتف والمطاعم يعزلك عن دفء المائدة العائلية، ويقلل من فرصة التواصل وتبادل الأحاديث المفيدة التي تحدث عادة أثناء تناول الأكل المنزلي مع الأسرة."
+            />
           </motion.div>
         ) : activeTab === 1 ? (
           <motion.div
@@ -103,7 +109,7 @@ export default function Theme4() {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white rounded-3xl p-8 border hover:-translate-y-1 transition-transform border-slate-200">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 md:p-8 border hover:-translate-y-1 transition-transform border-slate-200">
                 <h3 className="font-bold text-slate-800 text-xl flex items-center gap-3 mb-4">
                   <span className="bg-rose-100 text-rose-600 p-2 rounded-xl">❌</span>
                   المجاراة العمياء
@@ -113,7 +119,7 @@ export default function Theme4() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-8 border hover:-translate-y-1 transition-transform border-slate-200">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 md:p-8 border hover:-translate-y-1 transition-transform border-slate-200">
                 <h3 className="font-bold text-slate-800 text-xl flex items-center gap-3 mb-4">
                   <span className="bg-emerald-100 text-emerald-600 p-2 rounded-xl">✅</span>
                   الريادة الإيجابية
@@ -124,7 +130,7 @@ export default function Theme4() {
               </div>
             </div>
 
-            <div className="bg-blue-600 text-white p-8 rounded-3xl shadow-lg text-center mt-6 relative overflow-hidden">
+            <div className="bg-blue-600 text-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-lg text-center mt-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4"></div>
               <p className="font-bold text-xl relative z-10 leading-relaxed">
                 "صحتك هي مسؤوليتك الشخصية وليست مرهونة برغبات الآخرين. 
@@ -138,7 +144,7 @@ export default function Theme4() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">

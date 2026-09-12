@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={(import.meta as any).env?.BASE_URL || '/'}>
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route element={<Layout />}>

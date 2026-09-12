@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme3() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,12 +22,12 @@ export default function Theme3() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-green-600 shadow-sm border border-green-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -57,7 +58,7 @@ export default function Theme3() {
                 </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 items-center bg-emerald-50/50 rounded-3xl p-8 border border-emerald-100">
+            <div className="flex flex-col md:flex-row gap-8 items-center bg-emerald-50/50 rounded-3xl p-5 sm:p-6 md:p-8 border border-emerald-100">
               <div className="flex-1">
                 <p className="text-slate-700 text-lg leading-relaxed mb-4">
                   يرتبط الغذاء ارتباطاً وثيقاً بالبيئة المحيطة. هل فكرتِ يوماً من أين يأتي طعامك؟
@@ -92,6 +93,11 @@ export default function Theme3() {
                 </p>
               </div>
             </div>
+
+            <FastFoodRelation 
+              title="تكدس النفايات البلاستيكية"
+              description="بسبب اعتماد الوجبات السريعة على التغليف المعقد والأكواب البلاستيكية ذات الاستخدام الواحد، فإنها المساهم الأكبر في تلوث شوارعنا وبحارنا بمخلفات تستغرق مئات السنين لتتحلل."
+            />
           </motion.div>
         ) : activeTab === 1 ? (
           <motion.div
@@ -103,7 +109,7 @@ export default function Theme3() {
               الوجه المظلم للوجبات السريعة على البيئة!
             </h2>
             
-            <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
+            <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full blur-3xl"></div>
               
               <p className="text-lg text-slate-700 mb-8 relative z-10 font-medium">
@@ -148,7 +154,7 @@ export default function Theme3() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">

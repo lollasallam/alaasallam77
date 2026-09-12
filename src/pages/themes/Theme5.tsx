@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme5() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,12 +22,12 @@ export default function Theme5() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-orange-600 shadow-sm border border-orange-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -66,7 +67,7 @@ export default function Theme5() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white hover:-translate-y-1 transition-transform p-8 rounded-3xl border border-slate-100 shadow-sm">
+              <div className="bg-white hover:-translate-y-1 transition-transform p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm">
                 <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-4xl mb-4">😤</div>
                 <h3 className="font-bold text-slate-800 text-xl mb-3">التوتر والعصبية (التهاب الأعصاب)</h3>
                 <p className="text-slate-600 leading-relaxed">
@@ -74,7 +75,7 @@ export default function Theme5() {
                 </p>
               </div>
 
-              <div className="bg-white hover:-translate-y-1 transition-transform p-8 rounded-3xl border border-slate-100 shadow-sm">
+              <div className="bg-white hover:-translate-y-1 transition-transform p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm">
                 <div className="w-16 h-16 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-4xl mb-4">🎢</div>
                 <h3 className="font-bold text-slate-800 text-xl mb-3">تقلبات المزاج (قطار السكر المعلق)</h3>
                 <p className="text-slate-600 leading-relaxed">
@@ -83,7 +84,7 @@ export default function Theme5() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-r from-emerald-400 to-teal-500 p-8 rounded-3xl text-white shadow-lg flex flex-col md:flex-row items-center gap-6 mt-8">
+            <div className="bg-gradient-to-r from-emerald-400 to-teal-500 p-5 sm:p-6 md:p-8 rounded-3xl text-white shadow-lg flex flex-col md:flex-row items-center gap-6 mt-8">
               <div className="text-5xl bg-white/20 p-4 rounded-2xl">🧠</div>
               <div>
                 <h4 className="text-2xl font-bold mb-2">غذاء المخ = هرمونات السعادة</h4>
@@ -103,14 +104,14 @@ export default function Theme5() {
               ما هو "الأكل الواعي"؟ (Mindful Eating)
             </h2>
 
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative">
+            <div className="bg-white rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-200 shadow-sm relative">
               <p className="text-lg text-slate-700 leading-relaxed relative z-10 mb-8 font-medium">
                 في عصر السرعة والمشتتات، كثيراً ما نأكل أمام الشاشات دون أن نشعر بطعم الطعام، وكم أكلنا! 
                 يُقصد بالأكل الواعي هو حضور الذهن إثناء الأكل، وإعطاء جسمك حق الاستمتاع والتمييز الذكي بين:
               </p>
 
               <div className="flex flex-col md:flex-row gap-6 mb-8 relative z-10">
-                <div className="flex-1 bg-amber-50 p-8 rounded-3xl border-2 border-amber-200 text-center hover:shadow-md transition-shadow">
+                <div className="flex-1 bg-amber-50 p-5 sm:p-6 md:p-8 rounded-3xl border-2 border-amber-200 text-center hover:shadow-md transition-shadow">
                   <span className="block text-4xl mb-4">🍽️</span>
                   <h4 className="font-bold text-amber-800 text-xl mb-3">الجوع الفسيولوجي (الحقيقي)</h4>
                   <p className="text-slate-600 leading-relaxed">عندما تحتاج معدتك وجسمك حقاً إلى الطاقة والغذاء. يظهر بالتدريج، يتوقف عند الشبع، ويجعلك تشعرين بالرضا والطاقة بعد الانتهاء.</p>
@@ -120,14 +121,14 @@ export default function Theme5() {
                   <div className="bg-slate-800 text-white font-bold w-12 h-12 rounded-full flex items-center justify-center text-sm shadow-lg">VS</div>
                 </div>
 
-                <div className="flex-1 bg-rose-50 p-8 rounded-3xl border-2 border-rose-200 text-center hover:shadow-md transition-shadow">
+                <div className="flex-1 bg-rose-50 p-5 sm:p-6 md:p-8 rounded-3xl border-2 border-rose-200 text-center hover:shadow-md transition-shadow">
                   <span className="block text-4xl mb-4">😢</span>
                   <h4 className="font-bold text-rose-800 text-xl mb-3">الجوع العاطفي (الوهمي)</h4>
                   <p className="text-slate-600 leading-relaxed">يأتي فجأة كرغبة ملحة جداً في أكل "شيء مسكر أو مالح" هرباً من المذاكرة أو لتخفيف القلق. وغالباً ما يرافقه شعور بالذنب بعد الأكل!</p>
                 </div>
               </div>
 
-              <div className="bg-slate-800 rounded-3xl p-8 text-white shadow-md relative z-10">
+              <div className="bg-slate-800 rounded-3xl p-5 sm:p-6 md:p-8 text-white shadow-md relative z-10">
                 <h4 className="font-bold text-2xl mb-6 text-orange-400">تدريب عملي: خطوات الأكل الواعي</h4>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="flex gap-4">
@@ -149,6 +150,11 @@ export default function Theme5() {
                 </div>
               </div>
             </div>
+
+            <FastFoodRelation 
+              title="الاكتئاب وتقلب المزاج الحاد"
+              description="تؤدي كثرة استهلاك الوجبات السريعة إلى إحداث خلل في هرمونات السعادة بالجسم، وتصيبك بالشعور بالذنب وتقلبات مزاجية عنيفة سريعة بمجرد زوال تأثير السكر، مما يزيد من احتمالية التعرض للاكتئاب والتوتر."
+            />
           </motion.div>
         ) : (
           <motion.div
@@ -156,7 +162,7 @@ export default function Theme5() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-orange-100 text-orange-600 rounded-xl">

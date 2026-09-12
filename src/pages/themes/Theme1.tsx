@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import FoodPyramid from "../../components/Infographics/FoodPyramid";
-import BrainSports from "../../components/Infographics/BrainSports";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme1() {
   const [activeTab, setActiveTab] = useState(0);
@@ -24,12 +24,12 @@ export default function Theme1() {
   return (
     <div className="space-y-8">
       {/* Tabs */}
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-pink-600 shadow-sm border border-pink-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -98,7 +98,11 @@ export default function Theme1() {
             </div>
 
             <FoodPyramid />
-            <BrainSports />
+
+            <FastFoodRelation 
+              title="تدمير الطاقة والنشاط"
+              description="بدلاً من تزويد جسمك بالطاقة اللازمة للنشاط البدني، تقدم لك الوجبات السريعة دهوناً ثقيلة تجعلك تشعرين بالخمول الفوري وتمنعك من ممارسة رياضتك المفضلة بكفاءة."
+            />
           </motion.div>
         ) : activeTab === 1 ? (
           <motion.div
@@ -154,7 +158,7 @@ export default function Theme1() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-pink-500 to-rose-400 rounded-3xl p-8 text-white mt-10 text-center shadow-lg transform hover:scale-[1.01] transition-transform">
+            <div className="bg-gradient-to-r from-pink-500 to-rose-400 rounded-3xl p-5 sm:p-6 md:p-8 text-white mt-10 text-center shadow-lg transform hover:scale-[1.01] transition-transform">
               <h3 className="text-2xl font-bold mb-4">نصيحة ذهبية ✨</h3>
               <p className="opacity-95 max-w-2xl mx-auto text-lg leading-relaxed">
                 استبدلي رقائق البطاطس المقلية والحلويات بوجبة خفيفة من المكسرات والفواكه الطازجة (مثل التفاح أو الموز) قبل أداء التمارين الرياضية أو المذاكرة لتكوني في قمة نشاطك وقدراتك العقلية!
@@ -167,7 +171,7 @@ export default function Theme1() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-pink-100 text-pink-600 rounded-xl">

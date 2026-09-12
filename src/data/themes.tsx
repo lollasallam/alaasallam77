@@ -15,6 +15,7 @@ export const themesInfo = [
     icon: Activity,
     color: "bg-emerald-100 text-emerald-700",
     gradient: "from-emerald-500 to-emerald-600",
+    image: "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&q=80&w=800",
     component: Theme1,
   },
   {
@@ -25,6 +26,7 @@ export const themesInfo = [
     icon: UserCheck,
     color: "bg-teal-100 text-teal-700",
     gradient: "from-teal-500 to-teal-600",
+    image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=800",
     component: Theme2,
   },
   {
@@ -35,6 +37,7 @@ export const themesInfo = [
     icon: Sprout,
     color: "bg-emerald-100 text-emerald-700",
     gradient: "from-emerald-600 to-emerald-700",
+    image: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&q=80&w=800",
     component: Theme3,
   },
   {
@@ -45,6 +48,7 @@ export const themesInfo = [
     icon: Users,
     color: "bg-teal-100 text-teal-700",
     gradient: "from-teal-600 to-teal-700",
+    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800",
     component: Theme4,
   },
   {
@@ -55,6 +59,7 @@ export const themesInfo = [
     icon: Brain,
     color: "bg-emerald-50 text-emerald-700",
     gradient: "from-emerald-500 to-teal-600",
+    image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=800",
     component: Theme5,
   },
   {
@@ -65,6 +70,7 @@ export const themesInfo = [
     icon: ShieldCheck,
     color: "bg-teal-50 text-teal-700",
     gradient: "from-teal-500 to-emerald-600",
+    image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=800",
     component: Theme6,
   }
 ];

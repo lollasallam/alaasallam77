@@ -79,7 +79,7 @@ export default function Dashboard() {
 
   // Derived Statistics & Session Grouping
   const stats = useMemo(() => {
-    const uniqueUsers = new Set(interactions.map(i => i.userId)).size;
+    const uniqueUsers = new Set(interactions.filter(i => i.studentName && i.studentName !== 'مستخدم مجهول').map(i => i.studentName)).size;
     const totalInteractions = interactions.length;
     
     // Theme popularity
@@ -112,7 +112,13 @@ export default function Dashboard() {
       const timeMs = item.timestamp?.toMillis ? item.timestamp.toMillis() : Date.now();
       
       // Find the latest session for this user
-      let currentSession = studentSessions.findLast(s => s.userId === item.userId);
+      let currentSession = null;
+      for (let i = studentSessions.length - 1; i >= 0; i--) {
+        if (studentSessions[i].userId === item.userId) {
+          currentSession = studentSessions[i];
+          break;
+        }
+      }
       
       // Create new session if no session, or if this is an explicit login, or if time gap > 2 hours (7200000 ms)
       if (!currentSession || 

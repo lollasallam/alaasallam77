@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
 import WalkingBenefits from "../../components/Infographics/WalkingBenefits";
 import VitaminD from "../../components/Infographics/VitaminD";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme6() {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,12 +24,12 @@ export default function Theme6() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-teal-600 shadow-sm border border-teal-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -46,7 +47,7 @@ export default function Theme6() {
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}
             className="space-y-10"
           >
-            <div className="bg-teal-50 p-8 rounded-3xl border border-teal-100">
+            <div className="bg-teal-50 p-5 sm:p-6 md:p-8 rounded-3xl border border-teal-100">
               <h2 className="text-3xl font-bold text-teal-800 mb-6 border-r-4 border-teal-500 pr-4">
                 ما هي الصحة الوقائية الغذائية؟
               </h2>
@@ -70,19 +71,19 @@ export default function Theme6() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
                 <div className="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-3xl mb-6">🩸</div>
                 <h3 className="font-bold text-slate-800 text-xl mb-3">الوقاية من الأنيميا</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">تُعد من المشكلات الشائعة خصوصا بين المراهقات. تُعالج بتناول الأغذية الغنية بالحديد (كالورقيات القاتمة واللحوم والبقوليات) مع فيتامين ج (كالليمون) لامتصاص أفضل.</p>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
                 <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">🩺</div>
                 <h3 className="font-bold text-slate-800 text-xl mb-3">الوقاية من السكري</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">الاعتدال في تناول السكريات والنشويات يمنع تذبذب مستوى السكر بالدم، ويقيكِ من إرهاق البنكرياس وخطر الإصابة بمرض السكري من النوع الثاني على المدى الطويل.</p>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
+              <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover:-translate-y-2 transition-transform">
                 <div className="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl mb-6">⚖️</div>
                 <h3 className="font-bold text-slate-800 text-xl mb-3">الوقاية من السمنة</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">الابتعاد عن الوجبات السريعة الغنية بالدهون والسكريات هو خط الدفاع الأول ضد السمنة، والتي تعد المفتاح المباشر ومسبباً لأمراض أخرى كالضغط وأمراض القلب.</p>
@@ -90,6 +91,11 @@ export default function Theme6() {
             </div>
 
             <VitaminD />
+
+            <FastFoodRelation 
+              title="إضعاف جهاز المناعة وتدمير الحماية"
+              description="الوجبات السريعة لا تحتوي على الفيتامينات الضرورية مثل فيتامين د أو الحديد. بدلاً من ذلك، تصيب الجسم بالالتهابات المزمنة بسبب الدهون المهدرجة، مما يهدم درعك الواقي ويجعلك عرضة للإصابة بالأمراض والعدوى بأبسط فيروس."
+            />
 
           </motion.div>
         ) : activeTab === 1 ? (
@@ -103,7 +109,7 @@ export default function Theme6() {
             </h2>
             
             <div className="flex flex-col lg:flex-row gap-6 items-stretch">
-               <div className="flex-1 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+               <div className="flex-1 bg-white p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                  <div className="absolute top-0 left-0 w-2 h-full bg-rose-400"></div>
                  <div>
                   <h3 className="text-2xl font-bold text-slate-800 mb-4">تقليل الدهون المشبعة والملح</h3>
@@ -117,7 +123,7 @@ export default function Theme6() {
                  </div>
                </div>
 
-               <div className="flex-1 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+               <div className="flex-1 bg-white p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
                  <div className="absolute top-0 left-0 w-2 h-full bg-emerald-400"></div>
                  <div>
                   <h3 className="text-2xl font-bold text-slate-800 mb-4">تعزيز المناعة بالطبيعة</h3>
@@ -140,7 +146,7 @@ export default function Theme6() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-teal-100 text-teal-600 rounded-xl">

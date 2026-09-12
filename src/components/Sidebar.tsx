@@ -44,8 +44,8 @@ export default function Sidebar() {
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-200">
               <BookOpen size={28} />
             </div>
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-primary-600 to-primary-800">
-              صحتي في غذائي
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-primary-600 to-primary-800">
+              برنامج تثقيفي غذائي
             </span>
           </Link>
 

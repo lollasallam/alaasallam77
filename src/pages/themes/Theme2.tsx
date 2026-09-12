@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle, PlayCircle, HelpCircle } from "lucide-react";
+import { FastFoodRelation } from "../../components/FastFoodRelation";
 
 export default function Theme2() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,12 +22,12 @@ export default function Theme2() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-fit">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-8 bg-slate-50 p-2 rounded-2xl w-full sm:w-fit">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveTab(idx)}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
+            className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3 rounded-xl font-medium transition-all text-sm sm:text-base ${
               activeTab === idx
                 ? "bg-white text-purple-600 shadow-sm border border-purple-100"
                 : "text-slate-500 hover:text-slate-700 hover:bg-slate-100"
@@ -50,14 +51,14 @@ export default function Theme2() {
 
             <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100 mb-6">
                 <h3 className="text-2xl font-bold text-purple-800 mb-3 flex items-center gap-2">
-                  <span>𪐥</span> ثانياً: السلوك الشخصي الغذائي
+                  <span>✨</span> ثانياً: السلوك الشخصي الغذائي
                 </h3>
                 <p className="text-slate-700 leading-relaxed text-lg">
                   عاداتك اليومية في الأكل بتبني جسمك وشكلك وصحتك من جوه وبره. الأكل الصحي المتوازن بيخلي جلدك نضيف وشعرك قوي وأسنانك سليمة وهضمك تمام. لما تاكلي أكل طازج وطبيعي، جسمك بيتخلص من السموم ويحس براحة وخفة. أما الوجبات السريعة المليانة سكر ودهون ومواد حافظة، بتعمل تسوس في الأسنان وآلام في المعدة وانتفاخ مزعج. كمان الإفراط في السكر بيأثر على وزنك ويرفعه من غير ما تحسي. صحتك الشخصية مسؤوليتك إنتي، ومحدش غيرك هيقرر عنك إيه اللي تاكليه. ابدأي بخطوات صغيرة زي إنك تشربي مية أكتر وتاكلي فاكهة بدل الشيبسي. العادات الصحية اللي بتبدأيها دلوقتي هتفضل معاكي طول عمرك! 🌟
                 </p>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-100/50 to-indigo-100/50 rounded-3xl p-8 border border-purple-100">
+            <div className="bg-gradient-to-r from-purple-100/50 to-indigo-100/50 rounded-3xl p-5 sm:p-6 md:p-8 border border-purple-100">
               <p className="text-slate-700 text-lg leading-relaxed mb-6 font-medium">
                 يُسهم الغذاء المتوازن بفعالية في الحفاظ على صحة جسمك العامة ونظافته. الغذاء الصحي لا ينعكس فقط على طاقتك بل يمتد أثره لجمال شعرك، نضارة بشرتك، وحتى نعومة أظافرك وصحة أسنانك بشكل مباشر!
               </p>
@@ -85,6 +86,11 @@ export default function Theme2() {
                   </p>
                 </div>
               </div>
+
+              <FastFoodRelation 
+                title="تخريب الجمال الطبيعي"
+                description="تحتوي الوجبات السريعة على زيوت مقلية وسكريات عالية تؤدي لظهور حب الشباب، وتساقط الشعر بسبب سوء التغذية، واصفرار الأسنان، مما يؤثر على جمالك الطبيعي."
+              />
             </div>
           </motion.div>
         ) : activeTab === 1 ? (
@@ -133,7 +139,7 @@ export default function Theme2() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="space-y-8 bg-slate-50 p-8 rounded-3xl"
+            className="space-y-8 bg-slate-50 p-5 sm:p-6 md:p-8 rounded-3xl"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">

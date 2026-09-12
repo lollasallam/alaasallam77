@@ -50,17 +50,17 @@ export default function Welcome() {
         >
           <div className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-white border border-slate-200 px-3 sm:px-5 py-1 sm:py-2 rounded-full shadow-sm text-slate-700">
             <Apple className="text-emerald-700 w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="font-bold tracking-wide text-[10px] sm:text-sm">صحتي في غذائي</span>
+            <span className="font-bold tracking-wide text-[10px] sm:text-sm">برنامج تثقيفي غذائي</span>
             <HeartPulse className="text-emerald-700 w-3 h-3 sm:w-4 sm:h-4" />
           </div>
 
           <h1 className="text-base sm:text-3xl lg:text-4xl font-extrabold text-slate-800 leading-[1.4] sm:leading-[1.5] max-w-4xl mx-auto px-2">
             برنامج تثقيفي غذائي باستخدام الحاسب الآلي<br className="hidden sm:block"/>
-            <span className="mt-1 sm:mt-2 block pb-0 sm:pb-2 text-sm sm:text-3xl lg:text-4xl text-slate-700">
+            <span className="mt-1 sm:mt-2 block pb-0 sm:pb-2 text-sm sm:text-3xl lg:text-4xl text-slate-800">
               عن مخاطر الوجبات السريعة وتأثيرها على السلوك الصحي
             </span>
-            <span className="block text-xs sm:text-2xl mt-1 sm:mt-2 text-emerald-700">
-              لتلميذات المرحلة الأساسية
+            <span className="block text-xs sm:text-2xl mt-1 sm:mt-2 text-slate-800">
+              لتلميذات المرحلة الثانية من التعليم الأساسي
             </span>
           </h1>
 

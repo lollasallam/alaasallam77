@@ -9,7 +9,7 @@ export default function Layout() {
   const isHome = location.pathname === '/student';
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800 dir-rtl">
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800 dir-rtl overflow-x-hidden w-full">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-pink-100">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -30,7 +30,7 @@ export default function Layout() {
               <span className="font-bold font-sans text-sm sm:text-base hidden sm:block truncate max-w-[200px] md:max-w-md lg:max-w-xl">
                 برنامج تثقيفي غذائي عن مخاطر الوجبات السريعة
               </span>
-              <span className="font-bold sm:hidden text-lg">صحتي في غذائي</span>
+              <span className="font-bold sm:hidden text-sm">برنامج تثقيفي غذائي عن مخاطر الوجبات السريعة</span>
             </Link>
           </div>
           <nav className="flex items-center gap-1 sm:gap-4 shrink-0 overflow-x-auto no-scrollbar">
